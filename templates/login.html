@@ -1,0 +1,50 @@
+{% extends "base.html" %} {% block title %}Login{% endblock %} {% block content %}
+<head>
+  <link rel="stylesheet" href="/static/login.css" />
+
+</head>
+    <div class="login_form_container">
+      <form method="post" action="/login">
+        <div class="login_form">
+          <h2>Login</h2>
+
+          <div class="input_group">
+            <i class="fa fa-user"></i>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Email"
+              class="input_text"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="input_group">
+            <i class="fa fa-unlock-alt"></i>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              class="input_text"
+              autocomplete="off"
+            />
+          </div>
+
+          <button type="submit" class="button_group" id="login_button">
+            Login
+          </button>
+
+          <div class="fotter">
+            <a>Forgot Password ?</a>
+            <a href="/register">SignUp</a>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/static/login.js"></script>  
+
+{% endblock %}
+
